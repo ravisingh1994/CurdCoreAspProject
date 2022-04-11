@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@model List<CurdCoreAspProject.Db_context.EmpChetu>
+
+<table>
+    <tr>
+        <th>Eid</th>
+        <th>Ename</th>
+        <th>Email</th>
+        <th>City</th>
+        <th>Salary</th>
+        
+    </tr>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Eid</td>
+                <td>@item.Ename</td>
+                <td>@item.Eemail</td>
+                <td>@item.City</td>
+                <td>@item.Salary</td>
+
+            </tr>
+        }
+    </tbody>
+    
+</table>
